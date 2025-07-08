@@ -6,7 +6,9 @@ add_library(canvas canvas.cpp canvas.h
         point.cpp
         point.h
         attributes.cpp
-        attributes.h)
+        attributes.h
+        mock.cpp
+        mock.h)
 add_executable(canvas_testing test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 add_executable(graphics_project test_shapes.cpp)
