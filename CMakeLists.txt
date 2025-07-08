@@ -16,5 +16,7 @@ add_executable(canvas_testing test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 
 add_executable(graphics_project test_shapes.cpp)
-add_library(shapes shape.cpp shape.h)
+add_library(shapes shape.cpp shape.h
+        circle.cpp
+        circle.h)
 target_link_libraries(graphics_project PUBLIC shapes)
