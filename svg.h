@@ -5,7 +5,7 @@
 // Ricky
 class Svg : public Canvas{
 public:
-    Svg (std::string filename, int canvas_vertical_length, int canvas_horizontal_length);
+    Svg (std::string filename, int canvas_height, int canvas_width);
 
     void draw_ellipse(Point radius, Point center, Attributes a) override;
     void draw_rectangle(int height, int width, Point start, Attributes a) override;
@@ -14,8 +14,8 @@ public:
     void output_svg_file();
 
 private:
-    int canvas_vertical_length;
-    int canvas_horizontal_length;
-    std::vector<std::string> svg_lines;
+    int canvas_height;
+    int canvas_width;
+    std::vector<std::string> lines;
     std::string filename;
 };

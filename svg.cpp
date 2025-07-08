@@ -1,18 +1,35 @@
 #include "svg.h"
 #include <stdexcept>
+#include "key_util.h"
 
 // Ricky
-Svg::Svg(int canvas_vertical_length, int canvas_horizontal_length)
-    :filename{filename}, canvas_vertical_length{canvas_vertical_length}, canvas_horizontal_length{canvas_horizontal_length} {
-    if (canvas_horizontal_length < 1) {
-        throw std::runtime_error("A positive horizontal canvas length is required.");
-    } else if (canvas_vertical_length < 1) {
-        throw std::runtime_error("A positive horizontal canvas length is required.");
+Svg::Svg(std::string filename, int canvas_height, int canvas_width)
+    :filename{filename}, canvas_height{canvas_height}, canvas_width{canvas_width} {
+    if (canvas_width < 1) {
+        throw std::runtime_error("A positive width for the canvas is required.");
+    } else if (canvas_height < 1) {
+        throw std::runtime_error("A positive height for the canvas is required.");
+    } else if (filename.empty()) {
+        throw std::runtime_error("A filename is required.");
     }
 
+    // create used keys
+    Key canvas_width_key(Svg::canvas_width);
+    Key canvas_height_key(Svg::canvas_height);
+
     // add file header
-    svg_lines.push_back("<html>");
-    svg_lines.push_back("<body>");
-    svg_lines.push_back("<svg width="" + std::to_string(Svg::canvas_horizontal_length) + '" height="''" xmlns="http://www.w3.org/2000/svg">');
+    lines.push_back("<html>");
+    lines.push_back("<body>");
+    lines.push_back(
+        "<svg width=" + canvas_width_key.get() + " height=" + canvas_height_key.get() +
+        " xmlns=\"http://www.w3.org/2000/svg\">");
 }
 
+// Ricky
+void Svg::output_svg_file() {
+    lines.push_back("</svg>");
+    lines.push_back("</body>");
+    lines.push_back("</html>");
+
+
+}

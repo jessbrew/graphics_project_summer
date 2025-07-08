@@ -11,7 +11,9 @@ add_library(canvas canvas.cpp canvas.h
         mock.cpp
         mock.h
         svg.cpp
-        svg.h)
+        svg.h
+        key_util.cpp
+        key_util.h)
 add_executable(canvas_testing test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 
