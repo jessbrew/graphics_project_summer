@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.30)
+add_compile_options(-std=c++17 -g -O2)
 project(graphics_project)
 
 set(CMAKE_CXX_STANDARD 20)
