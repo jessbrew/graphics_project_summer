@@ -1,4 +1,6 @@
 #include "svg.h"
+#include <fstream>
+#include <iostream>
 #include <stdexcept>
 #include "key_util.h"
 
@@ -30,6 +32,16 @@ void Svg::output_svg_file() {
     lines.push_back("</svg>");
     lines.push_back("</body>");
     lines.push_back("</html>");
+    std::string document_output;
+    for (std::string line : lines) {
+        document_output += line + "\n";
+    }
 
+    std::ofstream out{filename};
+    if (!out) {
+        throw std::runtime_error("Failed to create file " + filename);
+    }
 
+    out << document_output;
+    std::cout << "SVG Saved!\n";
 }
