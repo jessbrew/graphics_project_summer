@@ -24,7 +24,7 @@ Svg::Svg(std::string filename, int canvas_height, int canvas_width)
 }
 
 // Ricky
-void Svg::output_svg_file() {
+void Svg::output() {
     lines.push_back("</svg>");
     lines.push_back("</body>");
     lines.push_back("</html>");

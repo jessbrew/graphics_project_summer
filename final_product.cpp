@@ -15,5 +15,5 @@ int main () {
     Line line(100, 700, 1000, 100,50, "orange");
     line.draw(svg_file);
 
-    svg_file.output_svg_file();
+    svg_file.output();
 }

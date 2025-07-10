@@ -11,7 +11,7 @@ public:
     void draw_rectangle(int height, int width, Point start, Attributes a) override;
     void draw_line(Point start, Point end, Attributes a) override;
 
-    void output_svg_file();
+    void output();
 
 private:
     int canvas_height;
