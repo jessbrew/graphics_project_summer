@@ -46,14 +46,25 @@ void Svg::output_svg_file() {
 void Svg::draw_ellipse(Point radius, Point center, Attributes a) {
     std::string ellipse{"<ellipse " + key_pair("cx", center.x) + key_pair("cy", center.y)
                          + key_pair("rx", radius.x) + key_pair("ry", radius.y)
-                         + key_pair("stroke", a.stroke_color) + key_pair("", a.stroke_width)
+                         + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
                          + key_pair("fill", a.fill_color)};
     lines.push_back(ellipse);
 }
 
 void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
-
+    std::string rectangle{"<rect " + key_pair("width", width) + key_pair("height", height)
+                                   + key_pair("x", start.x) + key_pair("y", start.y)
+                                   + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
+                                   + key_pair("fill", a.fill_color)
+    };
+    lines.push_back(rectangle);
 };
 
 void Svg::draw_line(Point start, Point end, Attributes a) {
+    std::string line{"<line " + key_pair("x1", start.x) + key_pair("y1", start.y)
+                              + key_pair("x2", end.x) + key_pair("y2", end.y)
+                              + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
+                              + key_pair("fill", a.fill_color)
+    };
+    lines.push_back(line);
 };
