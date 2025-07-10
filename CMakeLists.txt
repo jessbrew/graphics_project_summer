@@ -22,5 +22,7 @@ add_library(shapes shape.cpp shape.h
         circle.cpp
         circle.h
 rectangle.h
-rectangle.cpp)
+rectangle.cpp
+line.cpp
+line.h)
 target_link_libraries(graphics_project PUBLIC shapes canvas)
