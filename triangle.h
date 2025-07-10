@@ -11,6 +11,7 @@ public:
     Triangle(Point p1, Point p2, Point p3);
     Triangle(Point p1, Point p2, Point p3, int stroke_width, const std::string & stroke_color);
     void draw(Canvas &c) override;
+    void move(int x_move, int y_move) override;
 
 
 private:

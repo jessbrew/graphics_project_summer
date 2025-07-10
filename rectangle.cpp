@@ -36,3 +36,7 @@ void Rectangle::draw(Canvas& c) {
     c.draw_rectangle (height, width, corner, attributes);
 }
 
+void Rectangle::move(int x_move, int y_move) {
+    corner.x += x_move;
+    corner.y += y_move;
+}
