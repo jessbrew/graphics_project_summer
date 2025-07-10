@@ -58,7 +58,7 @@ void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
                                    + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
                                    + key_pair("fill", a.fill_color) + "/>"};
     lines.push_back(rectangle);
-};
+}
 
 //Amos
 void Svg::draw_line(Point start, Point end, Attributes a) {
@@ -67,4 +67,9 @@ void Svg::draw_line(Point start, Point end, Attributes a) {
                               + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
                               + key_pair("fill", a.fill_color) + "/>"};
     lines.push_back(line);
-};
+}
+
+// void Svg::draw_polygon(const std::vector<Point> &points, Attributes a) {
+//     std::string polygon{"<line " + key_points(points)};
+// }
+//

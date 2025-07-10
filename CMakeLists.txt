@@ -13,7 +13,9 @@ add_library(canvas canvas.cpp canvas.h
         svg.cpp
         svg.h
         key_util.cpp
-        key_util.h)
+        key_util.h
+        polygon.cpp
+        polygon.h)
 add_executable(canvas_testing test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 
