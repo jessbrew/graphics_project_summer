@@ -6,6 +6,7 @@
 
 #include <stdexcept>
 
+//Ricky
 Text::Text(std::string text, int x, int y, int font_size, std::string font_color)
     :text{text}, corner{x,y}, font_size{font_size}, font_color{font_color} {
     if (text.empty()) {

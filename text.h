@@ -1,6 +1,7 @@
 #pragma once
 #include "shape.h"
 
+// Ricky
 class Text : public Shape {
 public:
     Text (std::string text, int x, int y, int font_size, std::string font_color);
