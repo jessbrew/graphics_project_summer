@@ -28,3 +28,9 @@ Circle::Circle(int radius, int x, int y, int stroke_width, const std::string& st
 void Circle::draw(Canvas &c) {
     c.draw_ellipse({radius,radius}, center, attributes);
 }
+
+void Circle::move(int x_move, int y_move) {
+    center.x += x_move;
+    center.y += y_move;
+}
+

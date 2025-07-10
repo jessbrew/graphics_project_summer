@@ -28,9 +28,16 @@ Triangle::Triangle(Point p1, Point p2, Point p3, int stroke_width, const std::st
     attributes.stroke_width = stroke_width;
 }
 
-
 void Triangle::draw(Canvas &c) {
     c.draw_line(p1, p2, attributes);
     c.draw_line(p2, p3, attributes);
     c.draw_line(p3, p1, attributes);
+}
+void Triangle::move(int x_move, int y_move) {
+    p1.x += x_move;
+    p1.y += y_move;
+    p2.x += x_move;
+    p2.y += y_move;
+    p3.x += x_move;
+    p3.y += y_move;
 }

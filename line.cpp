@@ -22,4 +22,11 @@ Line::Line(int start_x, int start_y, int end_x, int end_y, int stroke_width, con
 void Line::draw(Canvas &c) {
     c.draw_line(start, end, attributes);
 }
+void Line::move(int x_move, int y_move) {
+    start.x += x_move;
+    start.y += y_move;
+    end.x += x_move;
+    end.y += y_move;
+}
+
 
