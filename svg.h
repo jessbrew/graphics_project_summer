@@ -12,6 +12,7 @@ public:
     void draw_line(Point start, Point end, Attributes a) override;
     void draw_text(std::string text, Point corner,int font_size, std::string font_color);
 
+    void draw_polygon(const std::vector<Point> &points, Attributes a) override;
 
     void output();
 

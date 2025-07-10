@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
-#include "key_util.h"
+#include "utils.h"
 
 // Ricky
 Svg::Svg(std::string filename, int canvas_height, int canvas_width)
@@ -58,7 +58,7 @@ void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
                                    + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
                                    + key_pair("fill", a.fill_color) + "/>"};
     lines.push_back(rectangle);
-};
+}
 
 //Amos
 void Svg::draw_line(Point start, Point end, Attributes a) {
@@ -75,3 +75,9 @@ void Svg::draw_text(std::string text, Point corner, int font_size, std::string f
     + key_pair("fill", font_color) + key_pair("font-size", font_size) + ">" + text + "</text>"};
     lines.push_back(line);
 }
+
+
+// void Svg::draw_polygon(const std::vector<Point> &points, Attributes a) {
+//     std::string polygon{"<line " + key_points(points)};
+// }
+//
