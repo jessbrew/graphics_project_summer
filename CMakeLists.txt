@@ -21,8 +21,11 @@ add_executable(graphics_project test_shapes.cpp)
 add_library(shapes shape.cpp shape.h
         circle.cpp
         circle.h
-rectangle.h
-rectangle.cpp
-line.cpp
-line.h)
+        rectangle.h
+        rectangle.cpp
+        line.cpp
+        line.h)
 target_link_libraries(graphics_project PUBLIC shapes canvas)
+
+add_executable(final_product final_product.cpp)
+target_link_libraries(final_product PUBLIC shapes canvas)
