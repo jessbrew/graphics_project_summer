@@ -43,11 +43,17 @@ void Svg::output_svg_file() {
 }
 
 //Amos
-void draw_ellipse(Point radius, Point center, Attributes a) {
-    std::string ellipse; "<ellipse " + key_pair("cx", center.x) + key_pair("cy", center.y)
+void Svg::draw_ellipse(Point radius, Point center, Attributes a) {
+    std::string ellipse{"<ellipse " + key_pair("cx", center.x) + key_pair("cy", center.y)
                          + key_pair("rx", radius.x) + key_pair("ry", radius.y)
                          + key_pair("stroke", a.stroke_color) + key_pair("", a.stroke_width)
-                         + key_pair("fill", a.fill_color);
+                         + key_pair("fill", a.fill_color)};
+    lines.push_back(ellipse);
 }
-void draw_rectangle(int height, int width, Point start, Attributes a) {};
-void draw_line(Point start, Point end, Attributes a) {};
+
+void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
+
+};
+
+void Svg::draw_line(Point start, Point end, Attributes a) {
+};
