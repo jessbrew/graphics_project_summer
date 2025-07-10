@@ -2,13 +2,4 @@
 #include <string>
 
 // Ricky
-class Key {
-public:
-    Key (std::string key);
-    Key (int key);
-
-    std::string get ();
-
-private :
-    std::string key;
-};
+std::string key_pair(std::string key, int input);

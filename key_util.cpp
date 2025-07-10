@@ -4,15 +4,12 @@
 
 #include "key_util.h"
 
-// Ricky
-Key::Key(std::string key)
-    :key{key} {}
-
 //Ricky
-Key::Key(int key)
-    :key{std::to_string(key)} {}
+std::string key_pair(std::string key, int input) {
+    return key + "=\"" + std::to_string(input) + "\"";
+}
 
 // Ricky
-std::string Key::get() {
-    return "\"" + key + "\"";
+std::string key_pair(std::string key, std::string input) {
+    return key + "=\"" + input + "\"";
 }
