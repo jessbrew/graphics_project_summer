@@ -5,7 +5,7 @@
 #include <stdexcept>
 
 Rectangle::Rectangle(int length, int width, int x, int y)
-    : length{length}, width{width}, corner{x,y} {
+    : height{height}, width{width}, corner{x,y} {
     if (length < 0) {
         throw std::runtime_error("length must be positive");
     }
@@ -17,7 +17,7 @@ Rectangle::Rectangle(int length, int width, int x, int y)
     }
 }
 Rectangle::Rectangle(int length, int width, int x, int y, int stroke_width, const std::string& stroke_color, const std::string& fill_color)
-    : length{length}, width{width}, corner{x,y} {
+    : height{height}, width{width}, corner{x,y} {
     if (length < 0) {
         throw std::runtime_error("length must be positive");
     }
@@ -32,7 +32,7 @@ Rectangle::Rectangle(int length, int width, int x, int y, int stroke_width, cons
     attributes.stroke_width = stroke_width;
 }
 
-void draw(Canvas& c) {
-
+void Rectangle::draw(Canvas& c) {
+    c.draw_rectangle (height, width, corner, attributes);
 }
 
