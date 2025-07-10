@@ -68,3 +68,10 @@ void Svg::draw_line(Point start, Point end, Attributes a) {
                               + key_pair("fill", a.fill_color) + "/>"};
     lines.push_back(line);
 };
+
+// Ricky
+void Svg::draw_text(std::string text, Point corner, int font_size, std::string font_color) {
+    std::string line{"<text " + key_pair("x", corner.x) + key_pair("y", corner.y)
+    + key_pair("fill", font_color) + key_pair("font-size", font_size) + ">" + text + "</text>"};
+    lines.push_back(line);
+}

@@ -24,7 +24,9 @@ add_library(shapes shape.cpp shape.h
         rectangle.h
         rectangle.cpp
         line.cpp
-        line.h)
+        line.h
+        text.cpp
+        text.h)
 target_link_libraries(graphics_project PUBLIC shapes canvas)
 
 add_executable(final_product final_product.cpp)

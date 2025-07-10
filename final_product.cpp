@@ -2,6 +2,7 @@
 #include "circle.h"
 #include "rectangle.h"
 #include "line.h"
+#include "text.h"
 
 int main () {
     Svg svg_file("test_svg.svg", 1920, 1080);
@@ -14,6 +15,9 @@ int main () {
 
     Line line(100, 700, 1000, 100,50, "orange");
     line.draw(svg_file);
+
+    Text text("why hello there", 700, 700, 15, "blue");
+    text.draw(svg_file);
 
     svg_file.output();
 }
