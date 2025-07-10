@@ -12,8 +12,8 @@ add_library(canvas canvas.cpp canvas.h
         mock.h
         svg.cpp
         svg.h
-        key_util.cpp
-        key_util.h
+        utils.cpp
+        utils.h
         polygon.cpp
         polygon.h)
 add_executable(canvas_testing test_canvas.cpp)
