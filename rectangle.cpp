@@ -4,9 +4,9 @@
 #include "rectangle.h"
 #include <stdexcept>
 
-Rectangle::Rectangle(int length, int width, int x, int y)
+Rectangle::Rectangle(int height, int width, int x, int y)
     : height{height}, width{width}, corner{x,y} {
-    if (length < 0) {
+    if (height < 0) {
         throw std::runtime_error("length must be positive");
     }
     if (width < 0) {
@@ -16,9 +16,9 @@ Rectangle::Rectangle(int length, int width, int x, int y)
         throw std::runtime_error("x and y must be positive");
     }
 }
-Rectangle::Rectangle(int length, int width, int x, int y, int stroke_width, const std::string& stroke_color, const std::string& fill_color)
+Rectangle::Rectangle(int height, int width, int x, int y, int stroke_width, const std::string& stroke_color, const std::string& fill_color)
     : height{height}, width{width}, corner{x,y} {
-    if (length < 0) {
+    if (height < 0) {
         throw std::runtime_error("length must be positive");
     }
     if (width < 0) {
