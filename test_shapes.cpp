@@ -1,9 +1,9 @@
 #include <iostream>
-#include "mock.h"
-#include "circle.h"
-#include "rectangle.h"
-#include "line.h"
-#include "triangle.h"
+#include "shape_lib/mock.h"
+#include "shape_lib/circle.h"
+#include "shape_lib/rectangle.h"
+#include "shape_lib/line.h"
+#include "shape_lib/triangle.h"
 
 int main () {
     try {

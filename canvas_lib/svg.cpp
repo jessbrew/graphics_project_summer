@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
-#include "utils.h"
+#include "../shared_utils/utils.h"
 
 // Ricky
 Svg::Svg(std::string filename, int canvas_height, int canvas_width)

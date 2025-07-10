@@ -2,7 +2,7 @@
 
 #include <vector>
 #include "shape.h"
-#include "point.h"
+#include "../shared_utils/point.h"
 
 class Polygon : public Shape{
 public:

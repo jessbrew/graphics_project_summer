@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "attributes.h"
-#include "canvas.h"
+#include "../shared_utils/attributes.h"
+#include "../canvas_lib/canvas.h"
 
 class Shape {
 public:
