@@ -18,3 +18,7 @@ void Mock::draw_rectangle(int height, int width, Point start, Attributes a) {
 void Mock::draw_polygon(const std::vector<Point> &points, Attributes a) {
     std::cout << "drawing polygon\n";
 }
+
+void Mock::draw_text(std::string text, Point corner, int font_size, std::string font_color) {
+    std::cout << "drawing text\n";
+}
