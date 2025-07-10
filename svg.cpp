@@ -19,8 +19,8 @@ Svg::Svg(std::string filename, int canvas_height, int canvas_width)
     lines.push_back("<html>");
     lines.push_back("<body>");
     lines.push_back(
-        "<svg " + key_pair("width", canvas_width) + " " + canvas_height_key.get() +
-        " xmlns=\"http://www.w3.org/2000/svg\">");
+        "<svg " + key_pair("width", canvas_width) + key_pair("height", canvas_height) +
+        "xmlns=\"http://www.w3.org/2000/svg\">");
 }
 
 // Ricky
