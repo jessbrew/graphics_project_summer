@@ -23,3 +23,8 @@ Text::Text(std::string text, int x, int y, int font_size, std::string font_color
 void Text::draw(Canvas &c) {
     c.draw_text(text, corner, font_size, font_color);
 }
+
+void Text::move(int x_move, int y_move) {
+    corner.x += x_move;
+    corner.y += y_move;
+}
