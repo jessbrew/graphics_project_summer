@@ -45,3 +45,11 @@ void Svg::output_svg_file() {
     out << document_output;
     std::cout << "SVG Saved!\n";
 }
+void draw_ellipse(Point radius, Point center, Attributes a) override {
+    // std::string ellipse; '<ellipse cx="' + std::to_string.center.x + '" cy="' + std::to_string.center.y,
+    //                      '" rx="', std::to_string.radius.x, '" ry="', std::to_string.radius.y,
+    //                      '" stroke="', a.stroke_color, '" stroke-width="', a.stroke_width,
+    //                      '" fill="', a.fill_color;
+}
+void draw_rectangle(int height, int width, Point start, Attributes a) override;
+void draw_line(Point start, Point end, Attributes a) override;
