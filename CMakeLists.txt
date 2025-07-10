@@ -13,9 +13,7 @@ add_library(canvas canvas.cpp canvas.h
         svg.cpp
         svg.h
         utils.cpp
-        utils.h
-        polygon.cpp
-        polygon.h)
+        utils.h)
 add_executable(canvas_testing test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 
@@ -26,7 +24,13 @@ add_library(shapes shape.cpp shape.h
         rectangle.h
         rectangle.cpp
         line.cpp
-        line.h)
+        text.cpp
+        text.h
+        line.h
+        triangle.cpp
+        triangle.h
+        polygon.cpp
+        polygon.h)
 target_link_libraries(graphics_project PUBLIC shapes canvas)
 
 add_executable(final_product final_product.cpp)
