@@ -10,6 +10,7 @@ int main () {
         Mock canvas;
         Circle c {10, 20, 30, 8, "orange", "black"};
         c.draw(canvas);
+        c.move(20,45);
         Rectangle r {10,20, 40,40};
         r.draw(canvas);
         Line l {10,20, 40,45};
@@ -18,6 +19,7 @@ int main () {
         t.draw(canvas);
         Triangle tri {{1,1}, {20,25}, {50,78}, 6, "brown" };
         tri.draw(canvas);
+        tri.move(10,10);
 
 
     }catch (std::exception &e) {
