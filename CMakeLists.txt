@@ -20,5 +20,7 @@ target_link_libraries(canvas_testing PUBLIC canvas)
 add_executable(graphics_project test_shapes.cpp)
 add_library(shapes shape.cpp shape.h
         circle.cpp
-        circle.h)
+        circle.h
+rectangle.h
+rectangle.cpp)
 target_link_libraries(graphics_project PUBLIC shapes)
