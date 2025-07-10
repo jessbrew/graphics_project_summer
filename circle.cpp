@@ -25,3 +25,6 @@ Circle::Circle(int radius, int x, int y, int stroke_width, const std::string& st
     attributes.stroke_color = stroke_color;
     attributes.stroke_width = stroke_width;
 }
+void Circle::draw(Canvas &c) {
+    c.draw_ellipse({radius,radius}, center, attributes);
+}
