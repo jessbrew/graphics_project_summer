@@ -2,7 +2,7 @@
 // Created by gamer on 7/8/2025.
 //
 
-#include "key_util.h"
+#include "utils.h"
 
 //Ricky
 std::string key_pair(std::string key, int input) {
@@ -13,3 +13,8 @@ std::string key_pair(std::string key, int input) {
 std::string key_pair(std::string key, std::string input) {
     return key + "=\"" + input + "\" ";
 }
+
+//Amos
+// std::string key_points(std::vector<Point> points) {
+//     for (int i < poin)
+// }
