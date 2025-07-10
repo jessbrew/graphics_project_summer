@@ -6,10 +6,10 @@
 
 //Ricky
 std::string key_pair(std::string key, int input) {
-    return key + "=\"" + std::to_string(input) + "\"";
+    return key + "=\"" + std::to_string(input) + "\" ";
 }
 
 // Ricky
 std::string key_pair(std::string key, std::string input) {
-    return key + "=\"" + input + "\"";
+    return key + "=\"" + input + "\" ";
 }

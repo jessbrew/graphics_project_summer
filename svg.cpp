@@ -15,15 +15,11 @@ Svg::Svg(std::string filename, int canvas_height, int canvas_width)
         throw std::runtime_error("A filename is required.");
     }
 
-    // create used keys
-    Key canvas_width_key(Svg::canvas_width);
-    Key canvas_height_key(Svg::canvas_height);
-
     // add file header
     lines.push_back("<html>");
     lines.push_back("<body>");
     lines.push_back(
-        "<svg width=" + canvas_width_key.get() + " height=" + canvas_height_key.get() +
+        "<svg " + key_pair("width", canvas_width) + " " + canvas_height_key.get() +
         " xmlns=\"http://www.w3.org/2000/svg\">");
 }
 
