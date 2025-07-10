@@ -15,6 +15,10 @@ std::string key_pair(std::string key, std::string input) {
 }
 
 //Amos
-// std::string key_points(std::vector<Point> points) {
-//     for (int i < poin)
-// }
+ std::string points_to_string(std::vector<Point> points) {
+    std::string points_text {"points=\""};
+     for (int i{0}; i < points.size(); ++i) {
+         points_text += points.at(i).x + "," + points.at(i).y + ' ';
+     }
+    return points_text;
+ }
