@@ -14,10 +14,10 @@ add_library(canvas canvas_lib/canvas.cpp canvas_lib/canvas.h
         canvas_lib/svg.h
         shared_utils/utils.cpp
         shared_utils/utils.h)
-add_executable(canvas_testing test_canvas.cpp)
+add_executable(canvas_testing canvas_lib/test_canvas.cpp)
 target_link_libraries(canvas_testing PUBLIC canvas)
 
-add_executable(graphics_project test_shapes.cpp)
+add_executable(graphics_project shape_lib/test_shapes.cpp)
 add_library(shapes shape_lib/shape.cpp shape_lib/shape.h
         shape_lib/circle.cpp
         shape_lib/circle.h
