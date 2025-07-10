@@ -5,7 +5,7 @@
 #include "shape_lib/text.h"
 
 int main () {
-    Svg svg_file("test_svg.svg", 1920, 1080);
+    Svg svg_file("test_svg2.svg", 1920, 1080);
 
     Circle circle(100, 110, 110, 20, "red", "blue");
     circle.draw(svg_file);

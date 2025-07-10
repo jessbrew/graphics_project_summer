@@ -1,5 +1,5 @@
-
 #include "polygon.h"
+#include <stdexcept>
 
 Polygon::Polygon(const std::vector<Point> &points)
     : points{points} {
