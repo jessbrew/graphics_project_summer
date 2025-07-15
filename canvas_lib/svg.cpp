@@ -47,6 +47,7 @@ void Svg::output() {
 
 //Amos
 void Svg::draw_ellipse(Point radius, Point center, Attributes a) {
+    //make the ellipse svg syntax
     std::string ellipse{"<ellipse " + key_pair("cx", center.x) + key_pair("cy", center.y)
                          + key_pair("rx", radius.x) + key_pair("ry", radius.y)
                          + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
@@ -56,6 +57,7 @@ void Svg::draw_ellipse(Point radius, Point center, Attributes a) {
 
 //Amos
 void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
+    //make the rectangle svg syntax
     std::string rectangle{"<rect " + key_pair("width", width) + key_pair("height", height)
                                    + key_pair("x", start.x) + key_pair("y", start.y)
                                    + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
@@ -65,6 +67,7 @@ void Svg::draw_rectangle(int height, int width, Point start, Attributes a) {
 
 //Amos
 void Svg::draw_line(Point start, Point end, Attributes a) {
+    //make the line svg syntax
     std::string line{"<line " + key_pair("x1", start.x) + key_pair("y1", start.y)
                               + key_pair("x2", end.x) + key_pair("y2", end.y)
                               + key_pair("stroke", a.stroke_color) + key_pair("stroke-width", a.stroke_width)
