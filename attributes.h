@@ -10,6 +10,7 @@ public:
     std::string stroke_color{"black"};
     int stroke_width{3};
     std::string fill_color{"black"};
+    // these are the default attributes
 };
 
 

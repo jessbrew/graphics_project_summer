@@ -32,6 +32,7 @@ void Triangle::draw(Canvas &c) {
     c.draw_line(p1, p2, attributes);
     c.draw_line(p2, p3, attributes);
     c.draw_line(p3, p1, attributes);
+    // we are drawing our triangle by individually making three lines
 }
 void Triangle::move(int x_move, int y_move) {
     p1.x += x_move;

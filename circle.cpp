@@ -27,6 +27,7 @@ Circle::Circle(int radius, int x, int y, int stroke_width, const std::string& st
 }
 void Circle::draw(Canvas &c) {
     c.draw_ellipse({radius,radius}, center, attributes);
+    //we use draw_ellipse because that is what the backend team created, but we make the x and y radius the same so then we get a circle
 }
 
 void Circle::move(int x_move, int y_move) {
