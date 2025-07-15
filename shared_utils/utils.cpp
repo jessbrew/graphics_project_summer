@@ -4,6 +4,8 @@
 
 #include "utils.h"
 
+#include <iostream>
+
 //Ricky
 std::string key_pair(std::string key, int input) {
     return key + "=\"" + std::to_string(input) + "\" ";
@@ -18,8 +20,9 @@ std::string key_pair(std::string key, std::string input) {
 //prints the points for the svg file for polygons
  std::string points_to_string(std::vector<Point> points) {
     std::string points_text {"points=\""};
-     for (int i{0}; i < points.size(); ++i) {
-         points_text += points.at(i).x + "," + points.at(i).y + ' ';
+     for (Point point : points) {
+         points_text += std::to_string(point.x) + "," + std::to_string(point.y) + " ";
      }
+    points_text += "\" ";
     return points_text;
  }

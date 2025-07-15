@@ -83,6 +83,7 @@ void Svg::draw_text(std::string text, Point corner, int font_size, std::string f
 void Svg::draw_polygon(const std::vector<Point> &points, Attributes a) {
     std::string polygon{"<polygon " + points_to_string(points) + key_pair("stroke", a.stroke_color)
                                     + key_pair("stroke-width", a.stroke_width) + key_pair("fill", a.fill_color)
+                                    + "/>"
     };
     lines.push_back(polygon);
 }

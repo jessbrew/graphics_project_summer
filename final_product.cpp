@@ -3,6 +3,7 @@
 #include "shape_lib/circle.h"
 #include "shape_lib/rectangle.h"
 #include "shape_lib/line.h"
+#include "shape_lib/polygon.h"
 #include "shape_lib/text.h"
 
 int main () {
@@ -20,6 +21,10 @@ int main () {
 
         Text text{"why hello there", 700, 700, 15, "blue"};
         text.draw(svg_file);
+
+        std::vector<Point> points = {{30, 30}, {50, 50}, {40, 60}, {20, 60}, {10, 50}};
+        Polygon p{points};
+        p.draw(svg_file);
 
         svg_file.output();
     } catch (std::exception& e) {
