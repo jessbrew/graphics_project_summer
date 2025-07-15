@@ -13,10 +13,25 @@ Svg svg_file{"example.svg", 1920, 1080};
 Circle circle{100, 110, 110, 20, "red", "blue"};
 circle.draw(svg_file);
 
-
 svg_file.output();
 ```
 ![example.png](example.png)
+
+## SVG Creation and Output
+Constructor:
+```c++
+Svg(std::string filename, int canvas_height, int canvas_width);
+```
+This creates the canvas that allows you to draw shapes with a name and canvas size.
+
+For example:
+```c++
+Svg svg_file{"example.svg", 1920, 1080}; 
+
+// draw shapes here
+
+svg_file.output();
+```
 
 ## Shapes
 The shapes you can draw:
@@ -49,12 +64,12 @@ Rectangle(int height, int width, int x, int y, int stroke_width, const std::stri
 Constructors:
 ```c++
 Circle(int radius, int x, int y);
-    Circle(int radius, int x, int y, int stroke_width,const std::string& stroke_color, const std::string& fill_color);
+Circle(int radius, int x, int y, int stroke_width,const std::string& stroke_color, const std::string& fill_color);
 ```
 
 ### Line
 Constructors:
 ```c++
 Line(int start_x, int start_y, int end_x, int end_y );
-    Line(int start_x, int start_y, int end_x, int end_y, int stroke_width, const std::string& stroke_color);
+Line(int start_x, int start_y, int end_x, int end_y, int stroke_width, const std::string& stroke_color);
 ```
