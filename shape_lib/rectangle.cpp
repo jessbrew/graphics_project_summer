@@ -18,7 +18,7 @@ Rectangle::Rectangle(int height, int width, int x, int y)
     }
 }
 Rectangle::Rectangle(int height, int width, int x, int y, int stroke_width, const std::string& stroke_color, const std::string& fill_color)
-    : Rectangle{height, width, x, y} {
+    : Rectangle{height, width, x, y} { // we are using the previous initializer list so we don't have too much repeated code
 
     attributes.fill_color = fill_color;
     attributes.stroke_color = stroke_color;
