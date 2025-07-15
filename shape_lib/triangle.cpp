@@ -3,7 +3,7 @@
 #include <stdexcept>
 
 Triangle::Triangle(int x1, int y1, int x2, int y2, int x3, int y3)
-    : p1{x1, y2}, p2 {x2, y2}, p3 {x3, y3} {
+    : p1{x1, y2}, p2 {x2, y2}, p3 {x3, y3} { // make three lines
     if (x1 < 0 || y1 < 0 || x2 < 0 || y2 < 0 || x3 < 0 || y3 < 0) {
         throw std::runtime_error("all points must be positive");
     }
