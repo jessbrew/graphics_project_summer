@@ -34,12 +34,16 @@ svg_file.output();
 ```
 
 ## Shapes
+
+![all_shapes_example.png](all_shapes_example.png)
+
 The shapes you can draw:
 - Rectangle
 - Circle
 - Line
 - Triangle
 - Text
+- Polygon
 
 The default attributes are the same for every shape.
 
