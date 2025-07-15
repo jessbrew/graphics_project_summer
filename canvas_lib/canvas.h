@@ -2,8 +2,8 @@
 // Created by zhimo on 7/8/2025.
 //
 #pragma once
-#include "point.h"
-#include "attributes.h"
+#include "../shared_utils/point.h"
+#include "../shared_utils/attributes.h"
 #include <vector>
 
 class Canvas {

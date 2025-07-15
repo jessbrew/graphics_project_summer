@@ -6,6 +6,7 @@ class Text : public Shape {
 public:
     Text (std::string text, int x, int y, int font_size, std::string font_color);
     void draw(Canvas& c) override;
+    void move(int x_move, int y_move) override;
 
 private:
     std::string text;

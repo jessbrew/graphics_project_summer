@@ -1,11 +1,11 @@
-#include "svg.h"
-#include "circle.h"
-#include "rectangle.h"
-#include "line.h"
-#include "text.h"
+#include "canvas_lib/svg.h"
+#include "shape_lib/circle.h"
+#include "shape_lib/rectangle.h"
+#include "shape_lib/line.h"
+#include "shape_lib/text.h"
 
 int main () {
-    Svg svg_file("test_svg.svg", 1920, 1080);
+    Svg svg_file("test_svg2.svg", 1920, 1080);
 
     Circle circle(100, 110, 110, 20, "red", "blue");
     circle.draw(svg_file);

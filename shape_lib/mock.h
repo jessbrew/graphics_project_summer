@@ -1,5 +1,5 @@
 #pragma once
-#include "canvas.h"
+#include "../canvas_lib/canvas.h"
 
 // Ricky
 

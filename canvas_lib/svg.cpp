@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
-#include "utils.h"
+#include "../shared_utils/utils.h"
 
 // Ricky
 Svg::Svg(std::string filename, int canvas_height, int canvas_width)
@@ -15,7 +15,7 @@ Svg::Svg(std::string filename, int canvas_height, int canvas_width)
         throw std::runtime_error("A filename is required.");
     }
 
-    // add file header
+    // add svg file header and set canvas size
     lines.push_back("<html>");
     lines.push_back("<body>");
     lines.push_back(
@@ -25,19 +25,22 @@ Svg::Svg(std::string filename, int canvas_height, int canvas_width)
 
 // Ricky
 void Svg::output() {
+    // close all svg tags started by the header added in Svg constructor
     lines.push_back("</svg>");
     lines.push_back("</body>");
     lines.push_back("</html>");
+
+    // put vector of lines into a string
     std::string document_output;
     for (std::string line : lines) {
         document_output += line + "\n";
     }
 
+    // output string to file
     std::ofstream out{filename};
     if (!out) {
         throw std::runtime_error("Failed to create file " + filename);
     }
-
     out << document_output;
     std::cout << "SVG Saved!\n";
 }
