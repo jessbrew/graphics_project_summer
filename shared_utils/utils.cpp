@@ -15,7 +15,7 @@ std::string key_pair(std::string key, std::string input) {
 }
 
 //Amos
-//prints the points for the svg file
+//prints the points for the svg file for polygons
  std::string points_to_string(std::vector<Point> points) {
     std::string points_text {"points=\""};
      for (int i{0}; i < points.size(); ++i) {
