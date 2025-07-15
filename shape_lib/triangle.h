@@ -20,4 +20,3 @@ private:
     Point p2;
     Point p3;
 };
-

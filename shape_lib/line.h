@@ -14,4 +14,3 @@ private:
     Point end;
 
 };
-

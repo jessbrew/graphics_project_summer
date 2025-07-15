@@ -1,3 +1,4 @@
+#include <iostream>
 #include "canvas_lib/svg.h"
 #include "shape_lib/circle.h"
 #include "shape_lib/rectangle.h"
@@ -5,19 +6,23 @@
 #include "shape_lib/text.h"
 
 int main () {
-    Svg svg_file("test_svg2.svg", 1920, 1080);
+    try {
+        Svg svg_file{"all_shapes_example.svg", 1920, 1080};
 
-    Circle circle(100, 110, 110, 20, "red", "blue");
-    circle.draw(svg_file);
+        Circle circle{100, 110, 110, 20, "red", "blue"};
+        circle.draw(svg_file);
 
-    Rectangle rectangle(100, 200, 300, 500, 25, "purple", "yellow");
-    rectangle.draw(svg_file);
+        Rectangle rectangle{100, 200, 300, 500, 25, "purple", "yellow"};
+        rectangle.draw(svg_file);
 
-    Line line(100, 700, 1000, 100,50, "orange");
-    line.draw(svg_file);
+        Line line{100, 700, 1000, 100,50, "orange"};
+        line.draw(svg_file);
 
-    Text text("why hello there", 700, 700, 15, "blue");
-    text.draw(svg_file);
+        Text text{"why hello there", 700, 700, 15, "blue"};
+        text.draw(svg_file);
 
-    svg_file.output();
+        svg_file.output();
+    } catch (std::exception& e) {
+        std::cerr << e.what();
+    }
 }

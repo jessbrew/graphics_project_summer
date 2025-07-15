@@ -14,5 +14,3 @@ public:
     virtual void draw_text(std::string text, Point corner,int font_size, std::string font_color) = 0;
     virtual void draw_polygon(const std::vector <Point> &points, Attributes a) = 0;
 };
-
-

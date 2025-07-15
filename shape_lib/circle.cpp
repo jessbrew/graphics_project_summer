@@ -29,4 +29,3 @@ void Circle::move(int x_move, int y_move) {
     center.x += x_move;
     center.y += y_move;
 }
-

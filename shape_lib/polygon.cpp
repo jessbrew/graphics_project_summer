@@ -25,5 +25,3 @@ void Polygon::move(int x_move, int y_move) {
         p.y += y_move;
     }
 }
-
-

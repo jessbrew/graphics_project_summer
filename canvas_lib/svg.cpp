@@ -86,5 +86,3 @@ void Svg::draw_polygon(const std::vector<Point> &points, Attributes a) {
     };
     lines.push_back(polygon);
 }
-
-

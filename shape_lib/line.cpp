@@ -26,5 +26,3 @@ void Line::move(int x_move, int y_move) {
     end.x += x_move;
     end.y += y_move;
 }
-
-

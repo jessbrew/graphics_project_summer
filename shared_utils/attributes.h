@@ -12,5 +12,3 @@ public:
     std::string fill_color{"black"};
     // these are the default attributes
 };
-
-

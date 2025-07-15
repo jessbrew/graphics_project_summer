@@ -16,4 +16,3 @@ private:
     int width;
     Point corner; // top left corner of rectangle
 };
-
